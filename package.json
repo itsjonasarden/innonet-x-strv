@@ -20,5 +20,9 @@
     "react-dom": "18.2.0",
     "three": "0.148",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@strv/eslint-config-react": "^4.2.0",
+    "@strv/eslint-config-typescript": "^3.2.0"
   }
 }
