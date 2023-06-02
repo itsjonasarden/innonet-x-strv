@@ -49,10 +49,9 @@ const Experience = () => {
     const modelGroup = new THREE.Group()
     const loader = new GLTFLoader()
     loader.load('models/city.glb', (gltf) => {
-      const skinnedMesh = gltf.scene
-      console.log(skinnedMesh)
+      const city = gltf.scene
 
-      skinnedMesh.traverse((child) => {
+      city.traverse((child) => {
         child.renderOrder = 2
         if (child instanceof THREE.Mesh) {
           child.material.stencilWrite = true
@@ -61,9 +60,11 @@ const Experience = () => {
         }
       })
 
+      city.children[1].position.set(0, 2.5, 2)
+
       modelGroup.renderOrder = 2
       gltf.scene.position.set(0, -2.5, -5)
-      modelGroup.add(skinnedMesh)
+      modelGroup.add(city)
     })
 
     // Lights
