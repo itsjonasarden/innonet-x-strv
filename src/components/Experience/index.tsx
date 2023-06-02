@@ -18,7 +18,7 @@ const Experience = () => {
       imageTargetSrc: '/targets/qr-code.mind',
       missTolerance: 10,
       warmupTolerance: 5,
-      filterMinCF: 0.00001,
+      filterMinCF: 0.0001,
       filterBeta: 0.1,
       uiLoading: 'yes',
       uiScanning: 'no',
