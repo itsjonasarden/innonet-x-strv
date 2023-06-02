@@ -60,10 +60,10 @@ const Experience = () => {
         }
       })
 
-      city.children[1].position.set(0, 2.5, 2)
+      city.children[1].position.set(0, 10, 10)
 
       modelGroup.renderOrder = 2
-      gltf.scene.position.set(0, -2.5, -5)
+      gltf.scene.position.set(0, -10, -15)
       modelGroup.add(city)
     })
 
@@ -77,6 +77,7 @@ const Experience = () => {
 
     renderer.setAnimationLoop(() => {
       renderer.render(scene, camera)
+      camera.far = 999999
       camera.fov = 45
       camera.updateProjectionMatrix()
     })
