@@ -16,10 +16,10 @@ const Experience = () => {
     const mindAR = new MindARThree({
       container: containerRef.current,
       imageTargetSrc: '/targets/qr-code.mind',
-      missTolerance: 50,
-      warmupTolerance: 5,
+      // missTolerance: 5,
+      warmupTolerance: 10,
       filterMinCF: 0.0001,
-      filterBeta: 0.1,
+      filterBeta: 0.01,
       uiLoading: 'yes',
       uiScanning: 'no',
       uiError: 'no',
